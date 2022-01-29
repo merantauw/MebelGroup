@@ -1,0 +1,38 @@
+# logs
+Logs
+*.log
+firebase-debug.log*
+
+.DS_Store
+.idea/
+.idea/*
+.vscode
+*.sublime*
+npm-debug.*
+
+# firebase cache
+.firebase/
+firebaserc
+.firebase.json
+database.rules.json
+
+# compiled binary addons
+dist/
+node_modules/
+package-lock.json
+app/css/*
+
+# optional eslint cache (для проектов на javascript)
+.eslintcache
+
+# optional REPL history
+.node_repl_history
+
+# output of 'npm pack'
+*.tgz
+
+# yarn integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.environment
