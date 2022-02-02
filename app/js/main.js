@@ -25,7 +25,15 @@ $(function () {
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     fade: true
+  });
+
+  // Load more
+  $('#loading').on('click', function () {
+    $('#boxes .box:hidden').slice(0, 4).slideDown()
+      if(($('#boxes .box:hidden')).length == 0){
+      $('#loading').fadeOut('slow')
+    }
   });
 });
