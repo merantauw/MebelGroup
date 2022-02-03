@@ -500,7 +500,7 @@
   &__buy:hover::before {
     background-color: $text;
   }
-  &__loading, 
+  &__loading,
   &__newitemsloading {
     font-size: 14px;
     line-height: 1.7;
@@ -599,20 +599,20 @@
       cursor: pointer;
       transition: all 0.2s;
     }
-    &__btn:hover{
+    &__btn:hover {
       background-color: transparent;
       color: $white;
       border: 1px solid $white;
     }
   }
-  
-  &__item-right{
+
+  &__item-right {
     max-width: 530px;
     width: 100%;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
     padding: 0 30px;
 
-    &__img img{
+    &__img img {
       // max-height: 662px;
       max-width: 560px;
       width: 100%;
@@ -620,30 +620,29 @@
       background-size: cover;
     }
 
-    &__title{
+    &__title {
       font-size: 28px;
       line-height: 1.6;
     }
 
-    &__price{
+    &__price {
       display: flex;
       justify-content: flex-start;
       margin-bottom: 22px;
-      &--new{
+      &--new {
         @include f600;
         padding-right: 25px;
       }
-
     }
-    &__description{
+    &__description {
       margin-bottom: 16px;
     }
-    &__bottom{
+    &__bottom {
       display: flex;
       justify-content: flex-start;
       align-items: center;
 
-      & .button-buy{
+      & .button-buy {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -654,18 +653,18 @@
         transition: all 0.3s;
         text-decoration: none;
         outline: none;
-        &__text{
+        &__text {
           font-size: 14px;
           @include f600;
           margin-right: 10px;
         }
-        &__icon{
+        &__icon {
           border-radius: 50%;
           position: relative;
           margin-left: 10px;
           cursor: pointer;
         }
-        &__icon::before{
+        &__icon::before {
           content: "\e903";
           font-size: 20px;
           padding: 5px;
@@ -673,7 +672,7 @@
           border-radius: 50%;
           transition: all 0.3s;
         }
-        &__icon:hover::before{
+        &__icon:hover::before {
           content: "\e9da";
           background-color: $peach;
           color: $text;
@@ -683,7 +682,7 @@
   }
 }
 
-.slick-arrow{
+.slick-arrow {
   border: none;
   width: 35px;
   height: 52px;
@@ -696,27 +695,123 @@
   background-color: transparent;
   outline: none;
 }
-.slick-prev{
+.slick-prev {
   left: 0;
   margin-right: 22px;
 }
-.slick-prev::before{
+.slick-prev::before {
   content: "\e901";
   font-size: 50px;
   font-family: "icomoon";
 }
 
-.slick-next{
+.slick-next {
   right: 0;
   margin-right: 22px;
 }
 
-.slick-next::before{
+.slick-next::before {
   content: "\e900";
   font-size: 50px;
   font-family: "icomoon";
 }
-
 // end collections
+
+// start projects
+.projects {
+  padding: 100px 0;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__gotoprojects {
+    font-size: 14px;
+    line-height: 1.7;
+    @include f600;
+    transition: color 0.3s ease;
+    margin-bottom: 40px;
+  }
+
+  &__gotoprojects:hover {
+    color: $hoverText;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__card-inner {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__card img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 600px;
+    max-width: 860px;
+    transition: all 0.5s;
+  }
+
+  &__card img:hover {
+    transform: scale(1.1);
+  }
+
+  &__card-link {
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 700px;
+    width: 100%;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.5s;
+  }
+  &__card-inner:hover .projects__card-link {
+    height: 150px;
+    padding: 45px 50px 40px;
+  }
+
+  &__card-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__card-title{
+    font-size: 20px;
+    line-height: 1.6;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+  &__card-description{
+    color: $hoverText;
+    line-height: 1.75;
+  }
+  &__card-details{
+    font-size: 14px;
+    line-height: 1.715;
+    @include f600;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+  &__card-details:hover{
+    color: $hoverText;
+  }
+}
+// end projects
 
 @import "media";
