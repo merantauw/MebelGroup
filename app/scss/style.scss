@@ -352,7 +352,8 @@
 //end slider
 
 //start sales-leaders
-.sales-leaders {
+.sales-leaders,
+.new-items {
   padding: 100px 0;
   &__title {
     text-align: center;
@@ -371,7 +372,8 @@
   &__inner {
     padding: 30px;
     transition: all 0.3s;
-    & .sales-leaders__hidden {
+    & .sales-leaders__hidden,
+    & .new-items__hidden {
       opacity: 0;
       transition: all 0.3s;
     }
@@ -470,7 +472,8 @@
   }
   &__inner:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-    & .sales-leaders__hidden {
+    & .sales-leaders__hidden,
+    & .new-items__hidden {
       opacity: 1;
     }
   }
@@ -497,7 +500,8 @@
   &__buy:hover::before {
     background-color: $text;
   }
-  &__loading {
+  &__loading, 
+  &__newitemsloading {
     font-size: 14px;
     line-height: 1.7;
     @include f600;
@@ -512,7 +516,8 @@
     transition: all 0.3s;
     cursor: pointer;
   }
-  &__loading::after {
+  &__loading::after,
+  &__newitemsloading::after {
     content: "+";
     position: absolute;
     padding-left: 20px;
@@ -520,13 +525,17 @@
     top: 50%;
     transform: translateY(-50%);
   }
-  &__loading:hover {
+  &__loading:hover,
+  &__newitemsloading:hover {
     border: 1px solid $text;
   }
 }
 
 // Количество карточек до нажатия кнопки Load more
 #boxes .box:nth-child(n + 5) {
+  display: none;
+}
+#newboxes .box:nth-child(n + 5) {
   display: none;
 }
 
@@ -542,7 +551,6 @@
 
 // start collections
 .collections {
-  padding-bottom: 150px;
   &__title {
     margin-bottom: 20px;
   }
