@@ -37,6 +37,13 @@ $(function () {
     }
   });
 
+  $('#newitemsloading').on('click', function () {
+    $('#newboxes .box:hidden').slice(0, 4).slideDown()
+      if(($('#newboxes .box:hidden')).length == 0){
+      $('#newitemsloading').fadeOut('slow')
+    }
+  });
+
   // Collections Slider
   $(".collections__inner").slick({
     dots: false,
