@@ -23,6 +23,7 @@
                 <div class="header__logo">
                   <a href="#">
                     <span>Mebel</span>Group
+                    <!-- <img src="images/test.png" alt=""> -->
                   </a>
                 </div>
                 <div class="header__menu">
@@ -51,7 +52,7 @@
                   <a class="header__btn-menu icon-user" href="#"></a>
                   <a class="header__btn-menu icon-cart" href="#"></a>
                   <div class="header__btn-menu">
-                    <div class="hamburger">
+                    <div class="hamburger menu-btn" id="toggle">
                       <div class="hamburger__span one" id="one"></div>
                       <div class="hamburger__span two" id="two"></div>
                       <div class="hamburger__span three" id="three"></div>
@@ -130,7 +131,7 @@
                         <a href="#">Gaming chairs</a>
                       </li>
                       <li class="categories__submenu-item">
-                        <a href="#">Exucutive chairs</a>
+                        <a href="#">Executive chairs</a>
                       </li>
                       <li class="categories__submenu-item">
                         <a href="#">Office chairs</a>
@@ -241,7 +242,7 @@
 
               <li>
                 <a href="#">
-                  Dicounts
+                  Discounts
                   <ul class="categories__inner-submenu categories__submenu">
                     <div class="categories__submenu-items">
                       <li class="categories__submenu-item">
@@ -1033,6 +1034,195 @@
         </div>
       </div>
     </section>
+
+    <!-- start sidebar -->
+    <div class="menu">
+      <div class="close-menu">
+        <ion-icon name="close"></ion-icon>
+      </div>
+
+      <div class="nav">
+        <ul class="main-menu">
+          <li class="main-menu__item sidebar__title">Catalog</li>
+
+          <li class="main-menu__item">
+            <a href="#">Chairs
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Stools</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Armchairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Bar chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Folding chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Children chairs</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Tables
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Dinner table</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Bar tables</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Coffee table</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Computer table</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Children table</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Children chairs</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Computer chairs
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Gaming chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Executive chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Coffee chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Office chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Children chairs</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Banquet furniture
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Banquet chairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Banquet tables</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Carts</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Catering furniture</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Kits
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Launch group</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Chairs sets</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Kitchens</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Catering furniture</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Other goods
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Consoles</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Banquets</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Puffs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Candles</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Collections
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Eames</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Tolix</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Soft armchairs</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Designer collection</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item">
+            <a href="#">Discounts
+              <ion-icon name="add"></ion-icon>
+            </a>
+            <ul class="sidebar__submenu">
+              <li class="submenu__item">
+                <a href="#">Clearance sale</a>
+              </li>
+              <li class="submenu__item">
+                <a href="#">Stocks</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="main-menu__item sidebar__title">Contacts</li>
+          <li class="main-menu__item sidebar__title">Support Service</li>
+          <li class="main-menu__item sidebar__title">Personal Area</li>
+
+        </ul>
+      </div>
+    </div>
+    <!-- end sidebar -->
+
     <footer class="footer">
       <div class="container">
         <div class="footer__inner">
@@ -1089,7 +1279,8 @@
       </div>
     </footer>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/6.0.1/esm/ionicons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

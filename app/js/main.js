@@ -53,4 +53,53 @@ $(function () {
     autoplay: false,
     fade: false
   });
+
+  // Hamburger
+
+  $('.hamburger').on('click', function () {
+    $(this).toggleClass('on');
+    $(".menu").toggleClass('active');
+    $('.header__top').toggleClass('off');
+  });
+  
+  // Sidebar
+  $('ul.main-menu li').on('click', function (e) {
+    e.preventDefault();
+
+    if ($(this).siblings('li').find('ul.sidebar__submenu:visible').length) {
+      $('ul.sidebar__submenu').slideUp('normal');
+    }
+    $(this).find('ul.sidebar__submenu').slideToggle('normal');
+  });
+
+  var t1 = new TimelineMax({ paused: true });
+  
+  t1.to('.menu', 0.3, {
+    autoAlpha: 1
+  });
+
+  t1.From(
+    '.main-menu li a:not(.sidebar__submenu li a)',
+    1,
+    {
+      opacity: 0,
+      y: 10,
+      ease: Power3.easeInOut
+    },
+    0.1
+  );
+  
+  t1.from('.sidebar__submenu', 0.3, {
+    autoAlpha: 0
+  })
+
+  t1.reverse();
+
+  $(document).on('click', '.menu-btn', function () {
+    t1.reversed(!t1.reversed());
+  });
+
+  $(document).on('click', '.close-menu', function () {
+    t1.reversed(!t1.reversed());
+  });
 });
