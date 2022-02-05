@@ -3,12 +3,14 @@ $(function () {
   $("#search").on('click', function () {
     $(".menu-item").addClass('hide-item');
     $(".header__search-form").addClass('active');
+    $(".header__box--left").addClass('active');
     $(".cross").addClass('active');
     $("#search").hide();
   })
   $(".cross").on('click', function () {
     $(".menu-item").removeClass('hide-item');
     $(".header__search-form").removeClass('active');
+    $(".header__box--left").removeClass('active');
     $(".cross").removeClass('active');
     $("#search").show();
   })
@@ -26,20 +28,20 @@ $(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    fade: true
+    fade: true,
   });
 
   // Load more
   $('#loading').on('click', function () {
     $('#boxes .box:hidden').slice(0, 4).slideDown()
-      if(($('#boxes .box:hidden')).length == 0){
+    if (($('#boxes .box:hidden')).length == 0) {
       $('#loading').fadeOut('slow')
     }
   });
 
   $('#newitemsloading').on('click', function () {
     $('#newboxes .box:hidden').slice(0, 4).slideDown()
-      if(($('#newboxes .box:hidden')).length == 0){
+    if (($('#newboxes .box:hidden')).length == 0) {
       $('#newitemsloading').fadeOut('slow')
     }
   });
@@ -61,7 +63,7 @@ $(function () {
     $(".menu").toggleClass('active');
     $('.header__top').toggleClass('off');
   });
-  
+
   // Sidebar
   $('ul.main-menu li').on('click', function (e) {
     e.preventDefault();
@@ -72,23 +74,24 @@ $(function () {
     $(this).find('ul.sidebar__submenu').slideToggle('normal');
   });
 
-  var t1 = new TimelineMax({ paused: true });
-  
+  var t1 = new TimelineMax({
+    paused: true
+  });
+
   t1.to('.menu', 0.3, {
     autoAlpha: 1
   });
 
   t1.From(
     '.main-menu li a:not(.sidebar__submenu li a)',
-    1,
-    {
+    1, {
       opacity: 0,
       y: 10,
       ease: Power3.easeInOut
     },
     0.1
   );
-  
+
   t1.from('.sidebar__submenu', 0.3, {
     autoAlpha: 0
   })
@@ -102,4 +105,6 @@ $(function () {
   $(document).on('click', '.close-menu', function () {
     t1.reversed(!t1.reversed());
   });
+
+
 });

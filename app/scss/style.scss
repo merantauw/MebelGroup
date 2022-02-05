@@ -14,7 +14,7 @@
     left: 0;
     width: 100vw;
     display: flex;
-    z-index: 2;
+    z-index: 3;
     overflow-x: hidden;
     overflow-y: hidden;
     background-color: $header-top-bg;
@@ -369,9 +369,14 @@
   }
   &__items {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    margin-left: -30px;
+  }
+  &__item{
+    flex-basis: calc(33.3333% - 30px);
+    margin-left: 30px;
   }
   &__inner {
     padding: 30px;
@@ -473,7 +478,7 @@
     padding: 5px;
     background-color: $white;
     border-radius: 50%;
-    // content: "\e93a";
+
   }
   &__inner:hover {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
@@ -1004,5 +1009,6 @@ a ion-icon{
   }
 }
 // end sidebar
+
 
 @import "media";
