@@ -74,67 +74,36 @@ $(function () {
     $(this).find('ul.sidebar__submenu').slideToggle('normal');
   });
 
-  var t1 = new TimelineMax({
-    paused: true
-  });
+  // Scroll reveal
+  window.sr = ScrollReveal();
 
-  t1.to('.menu', 0.3, {
-    autoAlpha: 1
-  });
-
-  t1.From(
-    '.main-menu li a:not(.sidebar__submenu li a)',
-    1, {
-      opacity: 0,
-      y: 10,
-      ease: Power3.easeInOut
-    },
-    0.1
-  );
-
-  t1.from('.sidebar__submenu', 0.3, {
-    autoAlpha: 0
-  })
-
-  t1.reverse();
-
-  $(document).on('click', '.menu-btn', function () {
-    t1.reversed(!t1.reversed());
-  });
-
-  $(document).on('click', '.close-menu', function () {
-    t1.reversed(!t1.reversed());
-  });
-
-  
-});
-// Scroll reveal
-window.sr = ScrollReveal();
-
-sr.reveal('.animate-left', {
+  sr.reveal('.animate-left', {
   origin: 'left',
   duration: 1000,
   distance: "25rem",
   delay: 600,
-});
+  });
 
-sr.reveal('.animate-right', {
+  sr.reveal('.animate-right', {
   origin: 'right',
   duration: 1000,
   distance: "25rem",
   delay: 600,
-});
+  });
 
-sr.reveal('.animate-top', {
+  sr.reveal('.animate-top', {
   origin: 'top',
   duration: 1000,
   distance: "25rem",
   delay: 600,
-});
+  });
 
-sr.reveal('.animate-bottom', {
+  sr.reveal('.animate-bottom', {
   origin: 'bottom',
   duration: 1000,
   distance: "25rem",
   delay: 600,
+  });
+
 });
+  

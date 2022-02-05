@@ -542,10 +542,10 @@
 }
 
 // Количество карточек до нажатия кнопки Load more
-#boxes .box:nth-child(n + 5) {
+#boxes .box:nth-child(n + 4) {
   display: none;
 }
-#newboxes .box:nth-child(n + 5) {
+#newboxes .box:nth-child(n + 4) {
   display: none;
 }
 
