@@ -13,11 +13,6 @@
   }
 }
 
-@media (max-width: 1306px){
-  .sales-leaders__items, .new-items__items{
-    justify-content: space-evenly;
-  }
-}
 
 @media (max-width: 1286px){
   .header__box--left{
@@ -25,9 +20,6 @@
   }
   .header__search-form{
     width: 500px;
-  }
-  .sales-leaders__items, .new-items__items{
-    justify-content: center;
   }
 }
 
